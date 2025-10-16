@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Jose Ricardo Lopez Flores - Experto en IA y Desarrollo Full Stack</title>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* CSS Integrado para un diseño profesional y visualmente impactante */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #007bff; /* Azul vibrante */
+            --secondary-color: #2c3e50; /* Azul oscuro para texto */
+            --background-light: #f4f7f6;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-light);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden; /* Para contener el borde del header */
+        }
+
+        /* ------------------ ENCABEZADO Y PERFIL ------------------ */
+        .header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .profile-photo img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color); /* Resalta la foto */
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+        }
+
+        .header-info h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .header-info .title {
+            font-size: 1.2em;
+            color: #4CAF50; /* Verde para destacar especialidades */
+            margin: 5px 0 15px 0;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            margin: 4px 0;
+            font-size: 0.95em;
+        }
+
+        .contact-info i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+
+        /* ------------------ SECCIONES GENERALES ------------------ */
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            border-left: 6px solid var(--primary-color);
+            padding-left: 15px;
+            font-weight: 600;
+        }
+
+        .section h2 i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+
+        /* ------------------ SOBRE MÍ (PERFIL PROFESIONAL) ------------------ */
+        #profile-summary p {
+            font-size: 1em;
+            text-align: justify;
+        }
+        
+        #profile-summary strong {
+            color: var(--primary-color);
+        }
+
+        /* ------------------ HABILIDADES TÉCNICAS (GRID) ------------------ */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .skill-category {
+            background-color: var(--background-light);
+            padding: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category ul li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+            color: #444;
+        }
+
+        .skill-category ul li i {
+            color: #28a745; /* Check verde */
+            margin-right: 8px;
+        }
+        
+        /* ------------------ EXPERIENCIA Y EDUCACIÓN ------------------ */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--border-color);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border: 3px solid white;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .timeline-item h3 {
+            color: var(--primary-color);
+            font-size: 1.25em;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+        }
+
+        .timeline-item .date, .timeline-item .university {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .timeline-item ul {
+            list-style: disc;
+            margin: 10px 0 0 20px;
+            padding: 0;
+            font-size: 0.95em;
+        }
+
+        .timeline-item ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Estilo para el logo de la universidad */
+        .university-logo {
+            height: 25px; /* Ajusta el tamaño según sea necesario */
+            vertical-align: middle;
+            margin-left: 8px;
+            margin-top: -3px; /* Pequeño ajuste para alinear verticalmente */
+            pointer-events: none; /* Para que no interfiera con la selección de texto */
+        }
+        
+        /* ------------------ RESPONSIVIDAD ------------------ */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .header-info h1 {
+                font-size: 2em;
+            }
+            .header-info .title {
+                font-size: 1em;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .content {
+                padding: 20px;
+            }
+            .timeline {
+                padding-left: 20px;
+            }
+            .university-logo {
+                height: 20px; /* Más pequeño en móvil */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-photo">
+                
+<img src="C:\Users\Admin\Downloads\1.jpg" alt="Foto de perfil de Jose Ricardo Lopez Flores">
+            </div>
+            <div class="header-info">
+                <h1>Jose Ricardo Lopez Flores</h1>
+                <p class="title">Arquitecto de Soluciones de IA | Experto Full Stack: Java & Python</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> jose ricardo lopez flores</p>
+                    <p><i class="fas fa-phone"></i> +XX XXX XXX XXX</p>
+                    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/tuperfil" target="_blank">linkedin.com/in/tuperfil</a></p>
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/JoseRicardo777" target="_blank">github.com/JoseRicardo777</a></p>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <section class="section" id="profile-summary">
+                <h2><i class="fas fa-microchip"></i> Resumen de Perfil</h2>
+                <p>
+                    Profesional con **8+ años de experiencia** en el desarrollo de software de misión crítica. Soy un experto en la construcción de **sistemas Full Stack escalables** (Java, Spring Boot, Python, Django, React) y un **líder técnico en la creación de Agentes de Inteligencia Artificial**. Mi especialidad es transformar requisitos de negocio complejos en modelos de IA operativos y eficientes, integrándolos sin fisuras en plataformas empresariales. Mi enfoque garantiza soluciones robustas, de alto rendimiento y con el mínimo coste operacional.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-tools"></i> Competencias Técnicas Avanzadas</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Especialización en Agentes de IA</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> **Creación y Orquestación de Agentes (LangChain, LlamaIndex)**</li>
+                            <li><i class="fas fa-check-circle"></i> Diseño de RAG (Retrieval-Augmented Generation)</li>
+                            <li><i class="fas fa-check-circle"></i> Fine-Tuning de LLMs (Modelos de Lenguaje Grandes)</li>
+                            <li><i class="fas fa-check-circle"></i> Plataformas Cloud IA (AWS Bedrock, Azure OpenAI)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend Experto (Java & Python)</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> **Java (Spring Boot, Microservicios, Hibernate)**</li>
+                            <li><i class="fas fa-check-circle"></i> Python (Django, Flask, FastAPI)</li>
+                            <li><i class="fas fa-check-circle"></i> Arquitectura de APIs RESTful & gRPC</li>
+                            <li><i class="fas fa-check-circle"></i> Bases de Datos (PostgreSQL, MongoDB, Cassandra)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frontend y Desarrollo Web</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> **React.js, Redux, Context API**</li>
+                            <li><i class="fas fa-check-circle"></i> JavaScript (ES6+), TypeScript</li>
+                            <li><i class="fas fa-check-circle"></i> Diseño Responsive (SASS, Tailwind CSS)</li>
+                            <li><i class="fas fa-check-circle"></i> Optimización de Rendimiento Web</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps, Cloud y Datos</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> **Docker, Kubernetes (Orquestación)**</li>
+                            <li><i class="fas fa-check-circle"></i> AWS (EC2, Lambda, S3) & Google Cloud</li>
+                            <li><i class="fas fa-check-circle"></i> CI/CD (GitHub Actions, GitLab CI, Jenkins)</li>
+                            <li><i class="fas fa-check-circle"></i> Herramientas de Machine Learning (Scikit-learn, TensorFlow)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-briefcase"></i> Experiencia Profesional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Líder Técnico de IA y Full Stack | [Nombre de la Empresa Destacada]</h3>
+                        <p class="date">Enero, 2021 – Presente</p>
+                        <ul>
+                            <li>**Diseño de Agentes Autónomos:** Arquitecturé e implementé un Agente de IA para automatización de soporte al cliente, reduciendo el tiempo de respuesta en un **40%** mediante la integración de un modelo LLM con bases de datos internas.</li>
+                            <li>**Modernización del Backend:** Migración exitosa de un monolito a una arquitectura de microservicios con **Spring Boot (Java)**, manejando un tráfico de 1M+ peticiones diarias.</li>
+                            <li>**Frontend de Alto Rendimiento:** Desarrollo del *dashboard* de gestión de IA con **React.js**, mejorando la usabilidad y la visualización de métricas de agentes.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Desarrollador Senior Backend (Python) | [Nombre de la Empresa Anterior]</h3>
+                        <p class="date">Enero, 2018 – Diciembre, 2020</p>
+                        <ul>
+                            <li>Lideré el equipo en la implementación de un sistema de recomendación utilizando **Python y Django**, lo que resultó en un aumento del **15%** en la tasa de conversión.</li>
+                            <li>Optimización de consultas **PostgreSQL** y *caching* con Redis, reduciendo la latencia de respuesta de la API de 500ms a menos de 80ms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Educación</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>[Tu Título o Carrera]</h3>
+                        <p class="university">
+                            Universidad Privada Domingo Savio 
+                            <img src="C:\Users\Admin\Downloads\2.jpg" alt="Logo Universidad Privada Domingo Savio" class="university-logo">
+                        </p>
+                        <p class="date">Año de Inicio – Año de Finalización</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Certificación Profesional en Ingeniería de Prompts y LLMs</h3>
+                        <p class="university">Instituto de Inteligencia Artificial Aplicada</p>
+                        <p class="date">Año de Finalización</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
